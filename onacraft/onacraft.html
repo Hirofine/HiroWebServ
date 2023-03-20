@@ -1,0 +1,25 @@
+<html>
+<header>
+    <title>Onacraft: votre hub web</title>
+    <script src="http://mcapi.org/scripts/minecraft.js"></script>
+    
+    <script>
+      MinecraftAPI.getServerStatus('hirofine.fr', {
+        port: 42069 // optional, only if you need a custom port
+      }, function (err, status) {
+        if (err) {
+          return document.querySelector('.server-status').innerHTML = 'Error loading status';
+        }
+        console.log("djdjd");
+        // you can change these to your own message!
+        document.querySelector('.server-online').innerHTML = status.online ? 'up' : 'down';
+      });
+    </script>
+</header>
+<body>
+    <h1>Gerez ici toutes les activitees vis-a-vis de Onacraft</h1>
+    <div class="server-status">
+        My awesome server is currently <span class="server-online"></span>!
+      </div>
+</body>
+</html>

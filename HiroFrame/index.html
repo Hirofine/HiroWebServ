@@ -1,0 +1,19 @@
+<html>
+<head>
+
+</head>
+<body>
+This is a sample text
+
+<script>
+fetch('https://api.warframestat.us/items/')
+    .then(response => {
+        return response.json();
+    }).then(items => {
+        console.log(items);    
+    })
+
+</script>
+
+</body>
+</html>
